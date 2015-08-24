@@ -1,0 +1,3 @@
+workshop_tutorial_hello:
+    path:     /hello/{name}
+    defaults: { _controller: WorkshopTutorialBundle:Default:hello }
