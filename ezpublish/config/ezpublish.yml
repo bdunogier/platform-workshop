@@ -47,3 +47,9 @@ ezpublish:
                 # TTL cache (http) in seconds
                 # Note that Http cache for a given content is always invalidated when publishing that content
                 default_ttl: 300
+            content_view:
+                full:
+                    ride:
+                        template: "WorkshopTutorialBundle:full:ride.html.twig"
+                        match:
+                            Identifier\ContentType: ride
