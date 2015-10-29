@@ -9,9 +9,6 @@ php:
 
 # list of paths/bundle to execute
 env:
-  - INSTALL="demoContentNonUniqueDB" PROFILE="demo" TEST="content"
-## Disabled as 'clean' doesn't work with the demobundle
-#  - PROFILE="demo" TEST="clean"
   - PROFILE="rest" TEST="fullJson"
   - PROFILE="rest" TEST="fullXml"
   - PROFILE="core"
