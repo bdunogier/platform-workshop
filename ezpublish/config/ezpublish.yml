@@ -53,8 +53,18 @@ ezpublish:
                         template: "WorkshopTutorialBundle:full:ride.html.twig"
                         match:
                             Identifier\ContentType: ride
+                    home:
+                        template: "WorkshopTutorialBundle:full:home.html.twig"
+                        controller: "WorkshopTutorialBundle:Default:listRides"
+                        match:
+                            Id\Location: 2
                 embed:
                     poi:
                         template: "WorkshopTutorialBundle:embed:poi.html.twig"
                         match:
                             Identifier\ContentType: poi
+                line:
+                    ride:
+                        template: "WorkshopTutorialBundle:line:ride.html.twig"
+                        match:
+                            Identifier\ContentType: ride

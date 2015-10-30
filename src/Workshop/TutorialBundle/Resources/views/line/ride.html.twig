@@ -1,0 +1,17 @@
+<tr>
+    <td>
+        <strong><a href="{{ path(location) }}" target="_self">{{ ez_content_name(content) }}</a></strong>
+    </td>
+    <td>
+        <p>{{ ez_field_value(content, "start_point").address }} to {{ ez_field_value(content, "end_point").address }}</p>
+    </td>
+    <td>
+        <p>{{ ez_field_value(content, "length").value }} Km</p>
+    </td>
+    <td>
+        <p>
+            {% set difficulty = ez_field_value(content, "level").selection|first %}
+            {% for i in 0..difficulty %}<i class="fa fa-star star-color"></i>{% endfor %}
+        </p>
+    </td>
+</tr>
