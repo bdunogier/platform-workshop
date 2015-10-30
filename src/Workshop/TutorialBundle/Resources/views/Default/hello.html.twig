@@ -1,0 +1,21 @@
+{% extends "WorkshopTutorialBundle::pagelayout.html.twig" %}
+
+{% block content %}
+<section class="below-navbar">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-xs-10 col-xs-offset-1 row-padding">
+                {% include "WorkshopTutorialBundle:parts:ride_search.html.twig" %}
+                <div class="col-xs-12">
+                    <div class="col-xs-11 text-left">
+                        <h2 class="extra-padding-left">
+                            Hello {{ name }} !
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
