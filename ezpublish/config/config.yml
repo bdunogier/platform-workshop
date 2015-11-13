@@ -102,21 +102,21 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
+# Base configuration for eZ Platform
 ezpublish:
     repositories:
         default:
             engine: legacy
 
+    # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list:
-            - site
+        list: [site]
         groups:
-            default_group: [site_group]
+            site_group: [site]
         default_siteaccess: site
         match:
             URIElement: 1
 
     system:
         site_group:
-            languages:
-                - eng-GB
+            languages: [eng-GB]
