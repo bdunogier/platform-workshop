@@ -101,3 +101,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+ezpublish:
+    repositories:
+        default:
+            engine: legacy
+
+    siteaccess:
+        list:
+            - site
+        groups:
+            default_group: [site_group]
+        default_siteaccess: site
+        match:
+            URIElement: 1
+
+    system:
+        site_group:
+            languages:
+                - eng-GB

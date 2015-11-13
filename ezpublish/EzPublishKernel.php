@@ -79,18 +79,12 @@ class EzPublishKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $environment = $this->getEnvironment();
-        $loader->load(__DIR__ . '/config/config_' . $environment . '.yml');
-        $configFile = __DIR__ . '/config/ezpublish_' . $environment . '.yml';
+        $rootDir = $this->getRootDir();
 
-        // if config file or base config file is missing, then install is not done yet
-        if (!is_file($configFile) || !is_file(__DIR__ . '/config/ezpublish.yml')) {
-            $configFile = __DIR__ . '/config/ezpublish_setup.yml';
+        $loader->load($rootDir .'/config/config_'.$environment.'.yml');
+
+        if (file_exists($ezpublishConfigFile = $rootDir.'/config/config_'.$environment.'.yml')) {
+            $loader->load($ezpublishConfigFile);
         }
-
-        if (!is_readable($configFile)) {
-            throw new RuntimeException("Configuration file '$configFile' is not readable.");
-        }
-
-        $loader->load($configFile);
     }
 }
